@@ -14,12 +14,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FileUploadComponent } from './Components/file-upload/file-upload.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { SalesForecastComponent } from './Components/sales-forecast/sales-forecast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    SalesForecastComponent
   ],
   imports: [
     BrowserModule,
@@ -33,8 +36,8 @@ import { MatCardModule } from '@angular/material/card';
     ReactiveFormsModule,
     FontAwesomeModule,
     HttpClientModule,
-    MatCardModule
-    
+    MatCardModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,10 @@
+<div class  = "form-container" mat-elevation-z6>
+    <h1 class = "center">File Upload</h1>
+    <select #teams (change)="onSelected(teams.value)">
+		<option default>Pick forecast period</option>
+		<option>1 month</option>
+		<option>6 months</option>
+		<option>1 year</option>
+        <option>5 years</option>
+	</select>
+</div>

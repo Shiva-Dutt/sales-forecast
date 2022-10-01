@@ -15,6 +15,7 @@ import { FileUploadComponent } from './Components/file-upload/file-upload.compon
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSelectModule } from '@angular/material/select';
 import { SalesForecastComponent } from './Components/sales-forecast/sales-forecast.component';
 
 @NgModule({
@@ -37,7 +38,8 @@ import { SalesForecastComponent } from './Components/sales-forecast/sales-foreca
     FontAwesomeModule,
     HttpClientModule,
     MatCardModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

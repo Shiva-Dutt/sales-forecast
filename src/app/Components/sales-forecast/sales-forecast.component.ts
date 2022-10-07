@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { SalesForecastService } from './sales-forecast.service';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { SalesForecastService } from 'src/app/Services/sales-forecast.service';
+import { User } from './user';
 
 @Component({
   selector: 'app-sales-forecast',
@@ -9,22 +10,28 @@ import { SalesForecastService } from './sales-forecast.service';
 })
 export class SalesForecastComponent implements OnInit {
 
-  form!: FormGroup;
+  
+  userModel = new User('');
+  
+  dates: any[] = [
+    '6months',
+    '12months',
+    '2years',
+    '5years'
+  ];
 
-  constructor(private forecastService: SalesForecastService, private fb: FormBuilder) { }
+  constructor(private forecastServie: SalesForecastService) { }
 
 
   ngOnInit(): void {
-      this.form = this.fb.group({
-        title:[''],
-        body:['']
-      })
   }
-
+  
   onSubmit(){
-    this.forecastService.upload(
-      this.form.value
-    ).subscribe()
+     console.log(this.userModel);  
+     this.forecastServie.upload(this.userModel)
+         .subscribe(
+           data => console.log('Success',data)
+         )
   }
 
   routeToMl(){

@@ -17,7 +17,7 @@ export class FileUploadService {
       const formData = new FormData();
 
       formData.append("file", file, file.name);
-      this.snackBar.open("File successfully uploaded", "Ok", { duration: 5000 });
+      this.snackBar.open("File successfully uploaded", "Ok", { duration: 3000 });
       return this.http.post(this.baseApiUrl, formData)
   }
 

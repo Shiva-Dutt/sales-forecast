@@ -10,11 +10,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     max-width: 300px;
     margin: auto;
 
-    background: #eceff1;
-    padding: 48px;
-    border-radius: 16px;
+    background: #8ee4af;
+    padding: 64px;
+    border-radius: 32px;
 }
+.form-container-upload{
+    display: block;
+    max-width: 300px;
+    margin: auto;
 
+    background: #8ee4af;
+    padding: 64px;
+    border-radius: 32px;
+}
 .form-container mat-form-field{
     width: 100%;
 }
@@ -30,4 +38,36 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .text-center{
     text-align: center;
+}
+.content-icon{
+    padding-right: 10px;
+
+    color: #05386b;
+}
+.content{
+
+    color: #05386b;
+}
+.content-full{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 128px;
+}
+.content-background{
+    background-color: #5cdb95;
+}
+.button-content{
+    background-color: #05386b;
+    color: #edf5e1
+}
+.content-font{
+    font-family: Impact;
+    font-weight: bold;
+    font-size: 40px;
+}
+.text-font{
+    font-family: Impact;
+    font-size: 28px;
+    color: #379683
 }

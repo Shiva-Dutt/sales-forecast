@@ -3,28 +3,32 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './Components/login/login.component';
 import { FileUploadComponent } from './Components/file-upload/file-upload.component';
 import { SalesForecastComponent } from './Components/sales-forecast/sales-forecast.component';
+import { AuthGuard } from './Services/auth.guard';
 
 const routes: Routes = [
   {
-    path: "",
-    component: LoginComponent
-  },
-  {
     path: "login",
-    component: LoginComponent
+    component: LoginComponent,
+    
   },
   {
     path: "upload",
-    component: FileUploadComponent
+    component: FileUploadComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "forecast",
-    component: SalesForecastComponent
+    component: SalesForecastComponent,
+  },
+  {
+    path: "",
+    component: LoginComponent
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class AppRoutingModule { }

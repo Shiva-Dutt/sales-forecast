@@ -1,10 +1,15 @@
-<div>
-    <mat-toolbar color = "primary">
-        <fa-icon [icon] = "arrow" class="content"></fa-icon>
+<div class = "div-content">
+    <mat-toolbar class = "content-background content content-font">
+        <fa-icon [icon] = "arrow" class="content-icon"></fa-icon>
         Sales Forecast
+        <!-- <div>
+            <button mat-raised-button class = "button-content" (click)="onClick()">Logout</button>
+        </div> -->
     </mat-toolbar>
 </div>
-<div class="content-full">
+<div class="content-background content-full">
     <router-outlet></router-outlet>
 </div>
+
+
 

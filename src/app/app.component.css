@@ -1,7 +1,7 @@
-.content{
-    padding-right: 5px;
+no-border{
+    outline: none;
 }
-.content-full{
-    padding: 32px;
+div-content{
+    display: flex;
+    justify-content: space-between;
 }
-

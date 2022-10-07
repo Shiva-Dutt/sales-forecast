@@ -1,22 +1,21 @@
 <div class  = "form-container" mat-elevation-z6>
-    <form [formGroup]="form">
-        
-            <mat-form-field appearance="fill">
+    <form #userForm = "ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <mat-form-field appearance="fill" >
                 <mat-label>Choose forecast period</mat-label>
-                <mat-select>
-                    <mat-option value="6months">6 months</mat-option>
-                    <mat-option value="12months">12 months</mat-option>
-                    <mat-option value="2years">2 years</mat-option>
-                    <mat-option value="5years">5 years</mat-option>
+                <mat-select name = "period" [(ngModel)] = "userModel.selectedItem">
+                    <mat-option *ngFor="let date of dates" [value]="date">{{date}}</mat-option>   
                 </mat-select>  
             </mat-form-field>
-        
+        </div>
+        <div class = "center margin-top">
+            <button mat-raised-button class = "button-content" type = "submit"> Submit </button>
+        </div>
     </form>
+    
     <div class = "center margin-top">
-        <button mat-raised-button color="primary" (click)="onSubmit()" > Submit </button>
-    </div>
-    <div class = "center margin-top">
-        <button mat-raised-button color="primary" (click)="routeToMl()" > Show Forecast </button>
+        <button mat-raised-button class = "button-content" (click)="routeToMl()" > Show Forecast </button>
     </div>
 </div>
+
 

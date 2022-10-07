@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { User } from '../Components/sales-forecast/user';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,11 @@ export class SalesForecastService {
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
-  upload(data: any){
+  upload(user: User){
     this.snackBar.open("Forecast period is selected", "Ok", { duration: 5000 });
-    return this.http.post(
+    return this.http.post<any>(
       this.baseApiUrl,
-      JSON.stringify(data)
+      user
     )
   }
 }

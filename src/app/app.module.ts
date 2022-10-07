@@ -17,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { SalesForecastComponent } from './Components/sales-forecast/sales-forecast.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,9 +40,10 @@ import { SalesForecastComponent } from './Components/sales-forecast/sales-foreca
     HttpClientModule,
     MatCardModule,
     MatSnackBarModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [{ provide: Window, useValue: window }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
